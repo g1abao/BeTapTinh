@@ -1,0 +1,38 @@
+.guide-text {
+    font-size: 30px;
+}
+
+.input-box {
+    position: relative;
+}
+
+.form-control {
+    border-radius: 0%;
+}
+
+input[type=radio].checkbox {
+    accent-color: black;
+}
+
+.btn {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 0%;
+    background-color: rgb(240, 246, 244);
+    text-align: center;
+}
+
+.announce {
+    display: inline;
+    font-size: 35px;
+}
+
+.text-announce {
+    color: red;
+    font-style: italic;
+}
+
+#print-announce {
+    font-size: 20px;
+    color: red;
+}
