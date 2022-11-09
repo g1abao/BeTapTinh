@@ -1,12 +1,14 @@
 function isNumeric(str) {
-    return !(Number.isNaN(Number(str)))
+    if (typeof str != "string") 
+        return false
+    return !isNaN(str) && !isNaN(parseFloat(str)) 
 }
 
 function checkFirstNumber() {
     let firstNum = document.getElementById("first-number").value;
     if (!isNumeric(firstNum)) {
         document.getElementById("print-announce").innerHTML=
-        `<p>Giá trị nhập ở ô <span class="text-announce">Số thứ nhất</span> không phải là số</p>`;
+        `<p>Giá trị nhập ở ô <span class="italic-text">Số thứ nhất</span> không phải là số</p>`;
     }
 }
 
@@ -14,7 +16,7 @@ function checkSecondNumber() {
     let secondNum = document.getElementById("second-number").value;
     if (!isNumeric(secondNum)) {
         document.getElementById("print-announce").innerHTML=
-        `<p>Giá trị nhập ở ô <span class="text-announce">Số thứ hai</span> không phải là số</p>`;
+        `<p>Giá trị nhập ở ô <span class="italic-text">Số thứ hai</span> không phải là số</p>`;
     }
 }
 
@@ -43,9 +45,9 @@ function checkCalculation() {
         "Chưa điền đủ hai số hợp lệ để thực hiện phép tính.";
     }
 
-    else if (isChecked == 0) {
+    if (isChecked() == 0) {
         document.getElementById("print-announce").innerHTML=
-        `<p>Bấm nút <span class="text-announce">Tính</span> mà chưa chọn phép tính</p>`;
+        `<p>Bấm nút <span class="italic-text">Tính</span> mà chưa chọn phép tính</p>`;
     }
 
     else {

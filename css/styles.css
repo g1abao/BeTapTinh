@@ -27,7 +27,7 @@ input[type=radio].checkbox {
     font-size: 35px;
 }
 
-.text-announce {
+.italic-text {
     color: red;
     font-style: italic;
 }
